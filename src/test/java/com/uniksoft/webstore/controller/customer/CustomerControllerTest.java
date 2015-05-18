@@ -1,4 +1,4 @@
-package com.uniksoft.webstore.controller;
+package com.uniksoft.webstore.controller.customer;
 
 import static org.mockito.Mockito.*;
 import static org.hamcrest.Matchers.*;
@@ -16,6 +16,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import com.uniksoft.webstore.controller.CustomerController;
 import com.uniksoft.webstore.entity.Customer;
 import com.uniksoft.webstore.service.CustomerService;
 

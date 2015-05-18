@@ -1,4 +1,4 @@
-package com.uniksoft.webstore.controller;
+package com.uniksoft.webstore.controller.customer;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
