@@ -1,4 +1,4 @@
-package com.uniksoft.webstore.controller;
+package com.uniksoft.webstore.controller.order;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +8,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import com.uniksoft.webstore.controller.OrderController;
 import com.uniksoft.webstore.service.OrderService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

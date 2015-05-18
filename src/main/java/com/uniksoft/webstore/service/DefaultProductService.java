@@ -19,4 +19,9 @@ public class DefaultProductService implements ProductService {
 		return productRepository.getAllProducts();
 	}
 
+	@Override
+	public List<Product> getProductsByCategory(String category) {
+		return productRepository.getProductsByCategory(category);
+	}
+
 }

@@ -1,4 +1,4 @@
-package com.uniksoft.webstore.controller;
+package com.uniksoft.webstore.controller.product;
 
 import static org.mockito.Mockito.*;
 
@@ -13,6 +13,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import com.uniksoft.webstore.controller.ProductController;
 import com.uniksoft.webstore.entity.Product;
 import com.uniksoft.webstore.service.ProductService;
 
@@ -52,6 +53,20 @@ public class ProductControllerTest {
 		when(mockedProductService.getAllProducts()).thenReturn(fakeProducts);
 		
 		mockMvc.perform(get("/products"))
+		       .andExpect(status().isOk())
+		       .andExpect(model().attribute("products", hasSize(fakeProducts.size())))
+		       .andExpect(view().name("product"));
+	}
+	
+	@Test
+	public void testMappingProductsCategory() throws Exception {
+		List<Product> fakeProducts = new ArrayList<Product>();
+		Product product1 = new Product(); product1.setCategory("laptop");
+		Product product2 = new Product(); product2.setCategory("laptop");
+		
+		when(mockedProductService.getProductsByCategory("laptop")).thenReturn(fakeProducts);
+		
+		mockMvc.perform(get("/products/laptop"))
 		       .andExpect(status().isOk())
 		       .andExpect(model().attribute("products", hasSize(fakeProducts.size())))
 		       .andExpect(view().name("product"));

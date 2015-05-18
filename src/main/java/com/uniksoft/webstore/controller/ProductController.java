@@ -3,20 +3,36 @@ package com.uniksoft.webstore.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.uniksoft.webstore.service.ProductService;
 
 @Controller
+@RequestMapping("/products")
 public class ProductController {
 
 	@Autowired
 	private ProductService productService;
 	
-	@RequestMapping(value = "/products", method = RequestMethod.GET)
+	/**
+	 * This is the default handler.
+	 */
+	@RequestMapping
 	public String list(Model model) {
 		model.addAttribute("products", productService.getAllProducts());
+		return "product";
+	}
+	
+	@RequestMapping("/all")
+	public String allProducts(Model model) {
+		model.addAttribute("products", productService.getAllProducts());
+		return "product";
+	}
+	
+	@RequestMapping("/{category}")
+	public String getProductsByCategory(Model model, @PathVariable("category") String productCategory) {
+		model.addAttribute("products", productService.getProductsByCategory(productCategory));
 		return "product";
 	}
 }
