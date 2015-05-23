@@ -31,4 +31,9 @@ public class DefaultProductService implements ProductService {
 		return productRepository.getProductsByFilter(filterParams);
 	}
 
+	@Override
+	public Product getProductById(String productId) {
+		return productRepository.getProductById(productId);
+	}
+
 }
