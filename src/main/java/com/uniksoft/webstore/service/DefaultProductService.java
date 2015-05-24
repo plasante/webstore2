@@ -36,4 +36,9 @@ public class DefaultProductService implements ProductService {
 		return productRepository.getProductById(productId);
 	}
 
+	@Override
+	public void addProduct(Product product) {
+		productRepository.addProduct(product);
+	}
+
 }
