@@ -19,7 +19,9 @@
 			<fieldset>
 				<legend>Add new product</legend>
 				<div class="form-group">
-					<label class="control-label col-lg-2 col-lg-2" for="productId">Product Id</label>
+					<label class="control-label col-lg-2 col-lg-2" for="productId">
+						<spring:message code="addProduct.form.productId.label" />
+					</label>
 					<div class="col-lg-10">
 						<form:input id="productId" path="productId" type="text" class="form:input-large"/>
 					</div>
@@ -58,18 +60,6 @@
 					<label class="control-label col-lg-2" for="unitsInStock">Units In Stock</label>
 					<div class="col-lg-10">
 						<form:input id="unitsInStock" path="unitsInStock" type="text" class="form:input-large"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-lg-2" for="unitsInOrder">Units In Order</label>
-					<div class="col-lg-10">
-						<form:input id="unitsInOrder" path="unitsInOrder" type="text" class="form:input-large"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-lg-2" for="discontinued">Discontinued</label>
-					<div class="col-lg-10">
-						<form:checkbox id="discontinued" path="discontinued" />
 					</div>
 				</div>
 				<div class="form-group">
