@@ -16,6 +16,7 @@
 	<section class="container-fluid">
 		<div class="row">
 			<div class="col-md-5">
+				<img src="<c:url value="/resources/images/${product.productId}.png"></c:url>" alt="image"  style = "width:100%"/>
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
 				<p><strong>Item Code : </strong>
