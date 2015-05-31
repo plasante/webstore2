@@ -85,16 +85,17 @@ public class ProductController {
 			throw new RuntimeException("Attempting to bind disallowed fields: " + 
 						StringUtils.arrayToCommaDelimitedString(suppressedFields));
 		}
-		MultipartFile productImage = newProduct.getProductImage();
-		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		if(productImage != null && !productImage.isEmpty()) {
-			try {
-				String path = rootDirectory + "resources/images/" + newProduct.getProductImage() + ".png";
-				productImage.transferTo(new File(path));
-			} catch(Exception e) {
-				throw new RuntimeException("Product Image saving failed", e);
-			}
-		}
+// Disabling Multipart
+//		MultipartFile productImage = newProduct.getProductImage();
+//		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+//		if(productImage != null && !productImage.isEmpty()) {
+//			try {
+//				String path = rootDirectory + "resources/images/" + newProduct.getProductImage() + ".png";
+//				productImage.transferTo(new File(path));
+//			} catch(Exception e) {
+//				throw new RuntimeException("Product Image saving failed", e);
+//			}
+//		}
 		productService.addProduct(newProduct);
 		return "redirect:/products";
 	}
