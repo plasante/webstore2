@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Styles -->
-<link rel="stylesheet" href="<c:url value="resources/css/style.css"/>" type="text/css" />
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript">
-</script>
-<script type="text/javascript" src="<c:url value="resources/js/layout.js"/>"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Styles -->
+	<link rel="stylesheet" href="<c:url value="resources/css/style.css"/>" type="text/css" />
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript" src="<c:url value="resources/js/layout.js"/>"></script>
 </head>
 <body>
 	<!-- Body Content -->
@@ -18,13 +18,10 @@
 
 	<nav>
 		<ul class="nav-list">
-			<li id="anchor-welcome" class="active"><a class="anchor"
-				href="#welcome">welcome</a></li>
+			<li id="anchor-welcome" class="active"><a class="anchor" href="#welcome">welcome</a></li>
 			<li id="anchor-info"><a class="anchor" href="#info">info</a></li>
-			<li id="anchor-about"><a class="anchor" href="#about">about</a>
-			</li>
-			<li id="anchor-gallery"><a class="anchor" href="#gallery">gallery</a>
-			</li>
+			<li id="anchor-about"><a class="anchor" href="#about">about</a></li>
+			<li id="anchor-gallery"><a class="anchor" href="#gallery">gallery</a></li>
 		</ul>
 	</nav>
 
@@ -153,9 +150,7 @@
 	</section>
 
 	<!-- Scripts -->
-	<script type="text/javascript"
-		src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
-
+	<script type="text/javascript" src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
 	<script type="text/javascript" src="<c:url value="resources/js/tools.js" />"></script>
 	<script type="text/javascript" src="<c:url value="resources/js/data.js" />"></script>
 
