@@ -12,7 +12,7 @@ var images = [
        {id: "008", src: "resources/images/008.jpg"},
        {id: "009", src: "resources/images/009.jpg"},
        {id: "0010", src: "resources/images/010.jpg"},
-       {id: "0011", src: "v/011.jpg"}
+       {id: "0011", src: "resources/images/011.jpg"}
 ];
 
 // Event listener for when file is uploaded
