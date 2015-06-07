@@ -1,0 +1,160 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.nav {
+    height: 45px;
+    width: 100%;
+    background: #d9522d;
+}
+.nav {
+    color: #FFFFFF;
+}
+.nav h3 {
+    font-weight: 300;
+    padding-top: 5px;
+}
+.nav .container {
+    padding: 5px;
+}
+#main_content {
+    padding-top: 15px;
+}
+.container {
+    width: 960px;
+    height: auto;
+}
+.left {
+    width: 65%;
+    float: left;
+}
+.right {
+    width: 35%;
+    float: left;
+}
+.box {
+    background: #f8f8f8;
+    padding: 15px;
+    border: thin solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.left, .right > h2 {
+    padding-bottom: 15px;
+}
+.left .content-body {
+    padding: 15px 20px 15px 0;
+}
+.left img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: thin #CCC solid;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.col-full {
+    width: 100%;
+    transition: width ease-out 0.30s;
+    -webkit-transition: width ease-out 0.30s;
+    -moz-transition: width ease-out 0.30s;
+}
+.news-item {
+    background: #f8f8f8;
+    padding: 13px;
+    border: thin solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    min-height: 51px;
+}
+.news-item h4 {
+    font-weight: 300;
+}
+.news-item p {
+    font-weight: 300;
+    font-size: 14px;
+}
+.news-item hr {
+    border: none;
+    border-bottom: thin #ccc solid;
+    padding: 2px 0;
+    margin-bottom: 2px;
+}
+.news-item img {
+    float: left;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: thin solid #ccc;
+}
+.spinner {
+    background: url("../img/spinner.gif") no-repeat center;
+    background-size: 50px 50px;
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    display: none;
+}
+.spinner::after {
+    content: "Loading...";
+    position: relative;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 55px;
+    padding: 3px;
+    font-size: 0.85em;
+}
+.footer {
+    margin-top: 45px;
+    height: 350px;
+    position: relative;
+    background: #d9522d;
+    width: 100%;
+}
+
+/* ======================================
+    MEDIA QUERIES
+   ====================================== */
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 320px;
+    }
+}
+/* TABLETS */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    .container {
+        width: 480px;
+    }
+}
+/* SMALL DESKTOP */
+@media screen and (min-width: 721px) and (max-width: 960px) {
+    .container {
+        width: 720px;
+    }
+}
+/* STANDARD DESKTOP */
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+/* LARGE DESKTOP */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    .container {
+        width: 1200px;
+    }
+}
+/* EXTRA LARGE DESKTOP */
+@media screen and (min-width: 1601px) {
+    .container {
+        width: 1600px;
+    }
+}
