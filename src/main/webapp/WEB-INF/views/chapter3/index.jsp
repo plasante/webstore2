@@ -7,7 +7,7 @@
 	<title>Conditional</title>
 	<link rel="stylesheet" href="<c:url value="resources/css/style2.css"/>" type="text/css" />
 </head>
-<body>
+<body onload="renderEngine.init();">
 	<div class="nav">
 		<div class="container"><h3>A word of coffee</h3></div>
 	</div>
